@@ -1,22 +1,20 @@
-# example_reporting_web_services
+# Example of usages of python FastAPI, scraping (async mode) and unittest
+## Subject : trends and charts about the marker Bitcoin - USD
 
-
-Local :
+## Local :
 
 >export PYTHONPATH=.
 
 >python example_reporting_web_services/app_ws.py
 
-http://localhost:50503/api/v1/trend/indicator/investing
-
-http://localhost:50503/api/v1/trend/indicator/tradingview (takes more time due to javascript async in the html page)
-
-http://localhost:50503/api/v1/trend/chart/investtech/graph
-
-http://localhost:50503/api/v1/trend/chart/investtech/rsi
+Endpoints : 
+ - http://localhost:50503/api/v1/trend/indicator/investing
+ - http://localhost:50503/api/v1/trend/indicator/tradingview (takes more time due to javascript async in the html page)
+ - http://localhost:50503/api/v1/trend/chart/investtech/graph
+ - http://localhost:50503/api/v1/trend/chart/investtech/rsi
 
 
-Docker :
+## Docker :
 Repo Docker Hub
 https://hub.docker.com/r/sarramagna/example_reporting_web_services
 
