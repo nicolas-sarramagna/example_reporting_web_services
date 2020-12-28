@@ -4,7 +4,19 @@ orbs:
   python: circleci/python@0.2.1
 
 jobs:
-  build-and-test:
+   mybuild:
+    environment:
+      IMAGE_NAME: sarramagna/example_reporting_web_services
+    docker:
+      - image: circleci/buildpack-deps:stretch
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Build Docker image
+          command: docker build -t $IMAGE_NAME:latest .
+
+  mytest:
     executor: python/default
     steps:
       - checkout
@@ -19,6 +31,10 @@ jobs:
           name: unit tests
 
 workflows:
-  main:
+  build-master:
     jobs:
-      - build-and-test
+      - mybuild:
+          filters:
+            branches:
+              only: master
+      - mytest
