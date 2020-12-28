@@ -6,23 +6,21 @@ See the main repo here : https://github.com/nicolas-sarramagna/example_reporting
 
 ## Local :
 
->export PYTHONPATH=.
-
->gunicorn example_reporting_web_services.app_ws:app --bind 0.0.0.0:50503 -w 1 -k uvicorn.workers.UvicornWorker
+uvicorn example_reporting_web_services.app_ws:app
 
 
 Endpoints : 
- - http://localhost:50503/api/v1/trend/indicator/investing
- - http://localhost:50503/api/v1/trend/indicator/tradingview (takes more time due to javascript async in the html page)
- - http://localhost:50503/api/v1/trend/chart/investtech/graph
- - http://localhost:50503/api/v1/trend/chart/investtech/rsi
+ - http://localhost:8000/api/v1/trend/indicator/investing
+ - http://localhost:8000/api/v1/trend/indicator/tradingview (takes more time due to javascript async in the html page)
+ - http://localhost:8000/api/v1/trend/chart/investtech/graph
+ - http://localhost:8000/api/v1/trend/chart/investtech/rsi
 
 
 ## Docker :
 Repo Docker Hub
 https://hub.docker.com/r/sarramagna/example_reporting_web_services
 
-Local : docker-compose up
+### Local : docker-compose up
 
 Fix in progress for the url tradingview due to the usage of chrome with puppeteer on Docker mode
 
