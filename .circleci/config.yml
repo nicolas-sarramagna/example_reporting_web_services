@@ -12,7 +12,9 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: python -m unittest discover -s tests -p 'test_*.py'
+          command: |
+	  mkdir -p /home/circleci/logs/
+	  python -m unittest discover -s tests -p 'test_*.py'
           name: Test
 
 workflows:
