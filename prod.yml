@@ -1,0 +1,8 @@
+version: '2'
+services:
+  backend:
+    image: sarramagna/example_reporting_web_services
+    ports:
+      - "20503:50503"
+    command: gunicorn example_reporting_web_services.app_ws:app --bind 0.0.0.0:50503 -w 2 -k uvicorn.workers.UvicornWorker
+
