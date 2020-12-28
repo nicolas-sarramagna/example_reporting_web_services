@@ -1,4 +1,4 @@
-# Example of usages of python FastAPI, scraping (async mode) and unittest
+# Example of usages of python FastAPI, scraping (sync & async mode) and unittest
 ## Subject : trends and charts about the market Bitcoin - USD
 
 ## Global usage :
