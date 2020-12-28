@@ -8,7 +8,8 @@ See the main repo here : https://github.com/nicolas-sarramagna/example_reporting
 
 >export PYTHONPATH=.
 
->python example_reporting_web_services/app_ws.py
+>gunicorn example_reporting_web_services.app_ws:app --bind 0.0.0.0:50503 -w 1 -k uvicorn.workers.UvicornWorker
+
 
 Endpoints : 
  - http://localhost:50503/api/v1/trend/indicator/investing
