@@ -10,7 +10,7 @@ WORKDIR $WORKDIR
 
 COPY . $WORKDIR
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt \
+    && mkdir -p /usr/src/logs
 
-CMD ["python","./example_reporting_web_services/app_ws.py"]
 

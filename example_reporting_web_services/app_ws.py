@@ -83,19 +83,3 @@ def _send_img(binary_image: bytes, filename_png: str):
     return response
 
 
-if __name__ == "__main__":
-    # 0 . Load config file
-    config = configparser.ConfigParser()
-    config_file_path = path.join(path.dirname(path.abspath(__file__)), "config/config.cfg")
-    config.read(config_file_path)
-
-    server_host = config.get("AppSection", "server_host")
-    server_port = int(config.get("AppSection", "server_port"))
-    server_reload = bool(strtobool(config.get("AppSection", "server_reload")))
-    server_debug = bool(strtobool(config.get("AppSection", "server_debug")))
-    log_level = config.get("AppSection", "server_log_level")
-
-    logger.info("Read config file DONE")
-
-    uvicorn.run("app_ws:app", log_level=log_level, reload=server_reload, debug=server_debug,
-                host=server_host, port=server_port)
