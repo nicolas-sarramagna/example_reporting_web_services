@@ -13,8 +13,8 @@ jobs:
       - python/save-cache
       - run:
           command: |
-	  mkdir -p /home/circleci/logs/
-	  python -m unittest discover -s tests -p 'test_*.py'
+          mkdir -p /home/circleci/logs/
+          python -m unittest discover -s tests -p 'test_*.py'
           name: Test
 
 workflows:
