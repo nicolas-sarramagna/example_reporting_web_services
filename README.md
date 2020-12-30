@@ -22,5 +22,5 @@ https://hub.docker.com/r/sarramagna/example_reporting_web_services
 
 ### Local : docker-compose up
 
-Fix in progress for the url tradingview due to the usage of chrome with puppeteer on Docker mode
+
 
