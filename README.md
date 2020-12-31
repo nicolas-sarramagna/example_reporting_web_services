@@ -1,6 +1,8 @@
 # Example of usages of python FastAPI, scraping (sync & async mode) and unittest
 ## Subject : trends and charts about the market Bitcoin - USD
 
+![fastapi doc swagger](https://github.com/nicolas-sarramagna/example_reporting_web_services/blob/main/images/fastapi_docs_swagger.png)
+
 ## Global usage :
 See the main repo here : https://github.com/nicolas-sarramagna/example_reporting_main
 
@@ -28,4 +30,3 @@ Image repo Docker Hub : https://hub.docker.com/r/sarramagna/example_reporting_we
 2. in a terminal, type  **docker-compose -f prod.yml up**
 3. Endpoints on port 20503 (defined in prod.yml)
 
-![fastapi doc swagger](https://github.com/nicolas-sarramagna/example_reporting_web_services/blob/main/images/fastapi_docs_swagger.png)
