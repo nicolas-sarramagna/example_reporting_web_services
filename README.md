@@ -4,9 +4,7 @@
 ## Global usage :
 See the main repo here : https://github.com/nicolas-sarramagna/example_reporting_main
 
-## Local :
-
-### with source code
+## With source code
 1. get the source code of the project
 
 2.
@@ -25,11 +23,11 @@ Endpoints without docker
 
 With docker, the port is 10503 (defined in the file docker-compose.yml)
 
-### without source code i.e with image Docker :
+## Without source code i.e with image Docker :
 Image repo Docker Hub : https://hub.docker.com/r/sarramagna/example_reporting_web_services
 
 1. get the file [prod.yml](https://github.com/nicolas-sarramagna/example_reporting_web_services/blob/main/prod.yml)
-2. in a terminal, type  **docker-compose up -f prod.yml up**
+2. in a terminal, type  **docker-compose -f prod.yml up**
 3. Endpoints on port 20503 (defined in prod.yml)
 
 
