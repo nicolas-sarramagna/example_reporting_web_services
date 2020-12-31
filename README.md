@@ -7,15 +7,13 @@ See the main repo here : https://github.com/nicolas-sarramagna/example_reporting
 ## With source code
 1. get the source code of the project
 
-2.
-*without docker* : in a terminal, type **uvicorn example_reporting_web_services.app_ws:app**
+2. *without docker* : in a terminal, type **uvicorn example_reporting_web_services.app_ws:app**
 
 or
 
 *with docker* : in a terminal, type **docker-compose up**
 
-3.
-Endpoints without docker
+3. Endpoints without docker :
  - GET http://localhost:8000/api/v1/trend/indicator/investing -> json
  - GET http://localhost:8000/api/v1/trend/indicator/tradingview -> json (takes more time due to javascript async in the html page)
  - GET http://localhost:8000/api/v1/trend/chart/investtech/graph -> image png
