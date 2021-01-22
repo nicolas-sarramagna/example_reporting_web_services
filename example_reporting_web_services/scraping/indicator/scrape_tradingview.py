@@ -109,7 +109,7 @@ class ScrapeTradingView:
 
     def _check_trend_values(self, trend_name: str, trend_sell: int, trend_neutral: int, trend_buy: int) -> None:
         """
-        Check if sum of trend values are equal of 11 for trend_name 'oscillators' and 17 for 'moving averages'
+        Check if sum of trend values are equal at least 11 for trend_name 'oscillators' and at leat 15 for 'moving averages'
         :param trend_name: check for 'oscillators' and 'moving averages'
         :param trend_sell: number of indicators sell
         :param trend_neutral: number of indicators neutral
@@ -118,9 +118,9 @@ class ScrapeTradingView:
         """
         trend_name_l = trend_name.lower()
         sum_trend_values = trend_sell + trend_neutral + trend_buy
-        if trend_name_l == 'oscillators' and 11 != sum_trend_values:
+        if trend_name_l == 'oscillators' and 11 > sum_trend_values:
             raise ValueError('missing trend indicators for oscillators,' +
-                             ' must sum of trend values == 11 and not : ' + str(sum_trend_values))
-        elif trend_name_l == 'moving averages' and 17 != sum_trend_values:
+                             ' must sum of trend values >= 11 and not : ' + str(sum_trend_values))
+        elif trend_name_l == 'moving averages' and 15 > sum_trend_values:
             raise ValueError('missing trend indicators for moving averages,' +
-                             ' must sum of trend values == 17 and not : ' + str(sum_trend_values))
+                             ' must sum of trend values >= 15 and not : ' + str(sum_trend_values))
